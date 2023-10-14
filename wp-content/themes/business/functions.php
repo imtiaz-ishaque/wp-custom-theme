@@ -11,6 +11,11 @@ function b_scripts()
 
     //js
     wp_enqueue_script("b-bootstrap", "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js", array(), "1.0", true);
-
     wp_enqueue_script("b-scripts", get_theme_file_uri("/js/scripts.js"), array("b-bootstrap"), "1.0", true);
 }
+
+//register menu
+register_nav_menus(array(
+    'main_menu' => __('Main Menu'),
+    'footer_menu' => __('Footer Menu')
+));
